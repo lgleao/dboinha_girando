@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oiii!</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 15px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Animação para girar continuamente */
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            /* Aplica o giro de 360° em 1.5s em loop infinito */
+            animation: girar 1.5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria">
+        <!-- Adicione quantas imagens quiser -->
+        <img src="i1.jpeg" alt="demonios">
+        <img src="i2.jpeg" alt="demonios">
+        <img src="i3.jpeg" alt="demonios">
+        <img src="i4.jpeg" alt="demonios">
+        <img src="i5.jpeg" alt="demonios">
+        <img src="i6.jpeg" alt="demonios">
+        <img src="i7.jpeg" alt="demonios">
+        <img src="i8.jpeg" alt="demonios">
+
+    </div>
+
+    <!-- Script com a lógica da troca de posição -->
+    <script src="caos.js"></script>
+</body>
+</html>
